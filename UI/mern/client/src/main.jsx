@@ -14,9 +14,6 @@ import TableSelectPage from "./pages/user/TableSelect.jsx";
 import CheckoutSummaryPage from "./pages/user/CheckoutSummary.jsx";
 import ThankYou from "./pages/user/ThankYou.jsx";
 
-
-import WelcomePageUser from "./pages/admin/WelcomeUser.jsx";
-
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -32,9 +29,6 @@ const router = createBrowserRouter([
       { path: "/checkout", element: <CheckoutSummaryPage /> },
       { path: "/menu/:menuId/table/:tableId/sub/:subId", element: <MenuItemsPage /> },
       { path: "/thankyou", element: <ThankYou /> },
-
-
-      { path: "/login", element: <WelcomePageUser /> },
     ],
   },
 ]);

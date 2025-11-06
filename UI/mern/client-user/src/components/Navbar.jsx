@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useLeaveConfirmation } from "../hooks/useLeaveConfirmation";
-/*import { ReactComponent as logo } from '../assets/logo.pdf';
-<img src={logo} alt="Botler Logo" className="h-8 w-8 mr-2" />*/
 
 function Navbar() {
   const navigate = useNavigate();
@@ -15,9 +13,9 @@ function Navbar() {
     const currentPath = location.pathname;
 
     const isWelcome = currentPath === "/";
-    const isMainMenu = currentPath === "/menu";
-    const isTableSelect = /^\/menu\/[^/]+\/table$/.test(currentPath);
-    const isMenuItems = /^\/menu\/[^/]+\/table\/[^/]+$/.test(currentPath);
+    const isLogin = currentPath === "/login";
+    //const isTableSelect = /^\/menu\/[^/]+\/table$/.test(currentPath);
+    //const isMenuItems = /^\/menu\/[^/]+\/table\/[^/]+$/.test(currentPath);
 
     //if on menu or table select no popup
     if (isWelcome || isMainMenu || isTableSelect) {
@@ -46,7 +44,7 @@ function Navbar() {
     <>
       <nav className="flex justify-between p-4 bg-indigo-600 text-white">
         <button
-          onClick={handleHomeClick}
+          onClick={navigate("/")}
           className="font-bold text-lg hover:text-indigo-200 transition"
         >
           Botler
